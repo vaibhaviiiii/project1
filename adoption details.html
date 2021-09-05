@@ -1,0 +1,127 @@
+<html>
+<head>
+  <title>adopt</title>
+
+  <script LANGUAGE="JavaScript" type="text/javascript">
+  function display() {
+    DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=400,height=200')
+    message = "<ul><li><b>NAME: </b>" + document.myform.name.value;
+    message += "<li><b>EMAIL ADDRESS: </b>" + document.myform.email.value;
+    message += "<li><b>PHONE: </b>" + document.myform.phone.value;
+    message += "<li><b>DOB: </b>" + document.myform.dob.value;
+    message += "<li><b>POSTAL CODE: </b>" + document.myform.postCode.value;
+    message += "<li><b>STATE: </b>" + document.myform.state.value + "</ul>";
+    message +="<center><b>we will get in touch for further details</b></center>";
+    DispWin.document.write(message);
+  }
+  </script>
+
+  <style>
+  text{
+    color: black;
+    text-align: left;
+    font-size: 24px;
+    font-family: cursive;
+  }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+  }
+
+  li {
+      float: left;
+  }
+
+  li a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 40px;
+  }
+
+  li a:hover {
+      background-color: #27BA39;
+  }
+
+  div.transbox {
+  margin: 30px;
+  background-color: #D3F226;
+  border: 1px solid black;
+
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+inp{
+
+  margin-left: 30px;
+
+}
+
+</style>
+</head>
+<body background="black-background-geometric-shapes.jpg">
+
+  <ul>
+    <li><a href="a.html">Home</a></li>
+    <li><a href="breeds.html">Breeds</a></li>
+    <li><a href="adoption details.html">Adoption Info</a></li>
+    <li><a href="feed.html">Feeding</a></li>
+    <li><a href="health.html">Health care</a></li>
+    <li><a href="about.html">About us</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+
+  <div class="background">
+    <div class="transbox">
+    <br>
+    <text>
+
+<img src="Cute-Puppies-puppies-22040895-500-313.jpg" style="float:right ; margin-right:30px ; margin-top :40px"></img>
+
+<form name="myform" method="post">
+    <h2><center>Personal details</center></h2>
+  Name:* <input type="text" name="name" required>
+  <br><br>
+  E-mail:* <input type="email" name="email" required placeholder="username@gmail.com" pattern="+@gmail.com">
+  <br><br>
+  PHONE: <input type="number" name="phone" >
+  <br><br>
+  Address:* <textarea name="address" rows="5" cols="40" required></textarea>
+  <br><br>
+  Date of Birth:<input id="dob" name="dob" type="date">
+  <br><br>
+  Post code :<input id="postCode" name="postCode" type="text" required>
+  <br><br>
+  State : <input id="state" name="state" list="state-names" type="text" required>
+  <datalist id="state-names">
+    <option label="maharashtra" value="maharashtra"></option>
+    <option label="madhya pradesh" value="madhya pradesh"></option>
+    <option label="uttar pradesh" value="uttar pradesh"></option>
+    <option label="hyderabad" value="hyderabad"></option>
+    <option label="bengal" value="bengal"></option>
+  </datalist>
+
+<br><br>
+  <inp><input style="font-style:cursive ; font-size:20px " type="submit" name="adopt" value="adopt" onClick="display()" ></inpr>
+
+
+</form>
+
+    </text>
+    <br><br>
+    </div>
+  </div>
+
+</i>
+</body>
+</html>

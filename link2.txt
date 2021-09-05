@@ -1,0 +1,61 @@
+
+in head
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script language="javascript" type="text/javascript">
+            function dynamicdropdown(listindex)
+            {
+                document.getElementById("subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "dog" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select an option","");
+                        document.getElementById("subcategory").options[1]=new Option("labrador","labrador");
+                        document.getElementById("subcategory").options[2]=new Option("golden retriever","golden retriever");
+                        document.getElementById("subcategory").options[3]=new Option("husky","husky");
+                        document.getElementById("subcategory").options[4]=new Option("dalmatian","dalmatian");
+                        document.getElementById("subcategory").options[5]=new Option("german shephard","german shephard");
+                        break;
+
+                    case "cat" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select an option","");
+                        document.getElementById("subcategory").options[1]=new Option("chausie","chausie");
+                        document.getElementById("subcategory").options[2]=new Option("havana brown","havana brown");
+                        document.getElementById("subcategory").options[3]=new Option("persian","persian");
+                        document.getElementById("subcategory").options[4]=new Option("sphynx","sphynx");
+                        break;
+
+                    case "other" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select an option","");
+                        document.getElementById("subcategory").options[1]=new Option("parrot","parrot");
+                        document.getElementById("subcategory").options[2]=new Option("rabbit","rabbit");
+                        document.getElementById("subcategory").options[3]=new Option("hamster","hamster");
+                        document.getElementById("subcategory").options[4]=new Option("other","other");
+                        break;
+                }
+                return true;
+            }
+       </script>
+
+
+in body
+
+
+<div class="category_div" id="category_div"><text>the kind of pet:</text>
+            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select a pet</option>
+                <option value="dog">dog</option>
+                <option value="cat">cat</option>
+                <<option value="other">other</option>
+            </select>
+        </div>
+        <div class="sub_category_div" id="sub_category_div"><text>Please select an option:</text>
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="subcategory" id="subcategory"><option value="">Please select an option</option></select>')
+            </script>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Please select an option</option>
+                </select>
+            </noscript>
+        </div> 
